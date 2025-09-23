@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "showcase_points",
+  "info": {
+    "singularName": "showcase-point",
+    "pluralName": "showcase-points",
+    "displayName": "ShowcasePoint"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "column": {
+      "type": "integer",
+      "required": true,
+      "unique": false,
+      "min": 1,
+      "max": 20
+    },
+    "row": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "max": 20
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "showcase_image": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::showcase-image.showcase-image",
+      "inversedBy": "showcase_points"
+    }
+  }
+}

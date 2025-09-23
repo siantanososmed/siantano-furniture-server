@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "recommended_products",
+  "info": {
+    "singularName": "recommended-product",
+    "pluralName": "recommended-products",
+    "displayName": "RecommendedProduct"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    }
+  }
+}
