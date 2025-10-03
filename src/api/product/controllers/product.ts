@@ -3,9 +3,9 @@
  */
 
 import { factories } from '@strapi/strapi'
+import type { Core } from '@strapi/strapi';
 
-
-export default factories.createCoreController('api::product.product', ({ strapi }) => ({
+export default factories.createCoreController('api::product.product', ({ strapi }: { strapi: Core.Strapi }) => ({
   async findOneBySlug(ctx){
     const { slug } = ctx.params;
 
