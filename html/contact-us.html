@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" style="margin:0;padding:0;">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+    <title>New Contact Message</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color:#f7f7f7; margin:0; padding:0;">
+<table role="presentation" style="width:100%; background-color:#f7f7f7; padding:40px 0;">
+    <tr>
+        <td align="center">
+            <table role="presentation" style="width:600px; background-color:#ffffff; border-radius:10px; overflow:hidden;">
+                <!-- Header -->
+                <tr>
+                    <td style="background-color:#093C7E; padding:20px 40px; text-align:center;">
+                        <h1 style="color:#ffffff; margin:0;">Siantano Furniture</h1>
+                    </td>
+                </tr>
+
+                <!-- Content -->
+                <tr>
+                    <td style="padding:30px 40px; color:#333333;">
+                        <h2 style="margin-top:0;">New Message from Contact Form</h2>
+
+                        <p>
+                            Hello Team,<br />
+                            You’ve received a new inquiry from the website contact form.
+                        </p>
+
+                        <table style="width:100%; border-collapse:collapse; margin-top:15px;">
+                            <tr>
+                                <td style="padding:8px 0; font-weight:bold; width:150px;">Name:</td>
+                                <td><%= name %></td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 0; font-weight:bold;">Email:</td>
+                                <td><%= email %></td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 0; font-weight:bold;">Phone:</td>
+                                <td><%= phone %></td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 0; font-weight:bold;">Subject:</td>
+                                <td><%= subject %></td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 0; font-weight:bold; vertical-align:top;">Message:</td>
+                                <td style="white-space:pre-line;"><%= message %></td>
+                            </tr>
+                        </table>
+
+                        <p style="margin-top:30px;">
+                            Please follow up with the sender as soon as possible.
+                        </p>
+
+                        <p style="margin-top:40px; font-size:12px; color:#888888;">
+                            This email was automatically generated from the Siantano Furniture contact form.
+                        </p>
+                    </td>
+                </tr>
+
+                <!-- Footer -->
+                <tr>
+                    <td style="background-color:#f0f0f0; padding:20px; text-align:center; font-size:12px; color:#777;">
+                        Send with ❤️ by Siantano Furniture
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

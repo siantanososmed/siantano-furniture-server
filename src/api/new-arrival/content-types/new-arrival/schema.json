@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "new_arrivals",
+  "info": {
+    "singularName": "new-arrival",
+    "pluralName": "new-arrivals",
+    "displayName": "NewArrival"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_applicants",
+  "info": {
+    "singularName": "job-applicant",
+    "pluralName": "job-applicants",
+    "displayName": "JobApplicant"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "jobId": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "cv": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "files",
+        "audios",
+        "videos",
+        "images"
+      ]
+    }
+  }
+}

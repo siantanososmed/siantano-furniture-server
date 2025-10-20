@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" style="margin:0;padding:0;">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+    <title>New Applicant Notification</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color:#f7f7f7; margin:0; padding:0;">
+<table role="presentation" style="width:100%; background-color:#f7f7f7; padding:40px 0;">
+    <tr>
+        <td align="center">
+            <table role="presentation" style="width:600px; background-color:#ffffff; border-radius:10px; overflow:hidden;">
+                <tr>
+                    <td style="background-color:#093C7E; padding:20px 40px; text-align:center;">
+                        <h1 style="color:#ffffff; margin:0;">Siantano Furniture</h1>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding:30px 40px; color:#333333;">
+                        <h2 style="margin-top:0;">New Job Application Received</h2>
+                        <p>
+                            Dear Human Resources,
+                        </p>
+                        <p>
+                            A new applicant has just submitted their application through the Careers portal.
+                        </p>
+
+                        <table style="width:100%; border-collapse:collapse; margin-top:15px;">
+                            <tr>
+                                <td style="padding:8px 0; font-weight:bold; width:150px;">Name:</td>
+                                <td><%= name %></td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 0; font-weight:bold;">Email:</td>
+                                <td><%= email %></td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 0; font-weight:bold;">Phone Number:</td>
+                                <td><%= phone %></td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 0; font-weight:bold;">Position:</td>
+                                <td><%= position_applied %></td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px 0; font-weight:bold;">Submitted At:</td>
+                                <td><%= submitted_at %></td>
+                            </tr>
+                        </table>
+
+                        <p style="margin-top:25px;">
+                            You can review the applicant's details and attached documents in the HR dashboard.
+                        </p>
+
+                        <p style="margin-top:30px;">
+                            <a href="<%= dashboard_link %>" style="background-color:#093C7E; color:#ffffff; padding:10px 20px; text-decoration:none; border-radius:5px;">View Application</a>
+                        </p>
+
+                        <p style="margin-top:40px; font-size:12px; color:#888888;">
+                            This is an automated email from the Careers system. Please do not reply.
+                        </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="background-color:#f0f0f0; padding:20px; text-align:center; font-size:12px; color:#777;">
+                        Send with ❤️ by Siantano Furniture Careers
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

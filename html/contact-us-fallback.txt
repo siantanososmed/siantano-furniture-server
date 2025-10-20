@@ -1,0 +1,24 @@
+Siantano Furniture
+==================
+
+New Message from Contact Form
+-----------------------------
+
+Hello Team,
+
+You’ve received a new inquiry from the website contact form.
+
+Name: <%= name %>
+Email: <%= email %>
+Phone: <%= phone %>
+Subject: <%= subject %>
+
+Message:
+<%= message %>
+
+Please follow up with the sender as soon as possible.
+
+----------------------------------------
+This email was automatically generated from the Siantano Furniture contact form.
+Send with ❤️ by Siantano Furniture
+----------------------------------------

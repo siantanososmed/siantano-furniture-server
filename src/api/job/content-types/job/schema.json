@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Job"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "position",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "jobStatus": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Open",
+        "Close"
+      ]
+    },
+    "experience": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "required": false
+    }
+  }
+}

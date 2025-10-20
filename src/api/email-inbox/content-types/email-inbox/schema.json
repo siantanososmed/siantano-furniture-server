@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "email_inboxes",
+  "info": {
+    "singularName": "email-inbox",
+    "pluralName": "email-inboxes",
+    "displayName": "EmailInbox"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contactUsInbox": {
+      "type": "email",
+      "private": true,
+      "required": true
+    },
+    "careerInbox": {
+      "type": "email",
+      "private": true,
+      "required": true
+    }
+  }
+}

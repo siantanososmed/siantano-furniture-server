@@ -1,0 +1,25 @@
+Siantano Furniture
+==================
+
+New Job Application Received
+----------------------------
+
+Dear Human Resources,
+
+A new applicant has just submitted their application through the Careers portal.
+
+Name: <%= name %>
+Email: <%= email %>
+Phone Number: <%= phone %>
+Position Applied: <%= position_applied %>
+Submitted At: <%= submitted_at %>
+
+You can review the applicant's details and attached documents in the HR dashboard.
+
+View Application:
+<%= dashboard_link %>
+
+----------------------------------------
+This is an automated email from the Careers system. Please do not reply.
+Send with ❤️ by Siantano Furniture Careers
+----------------------------------------
