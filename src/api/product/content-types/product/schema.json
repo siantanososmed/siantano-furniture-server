@@ -106,15 +106,15 @@
     },
     "finishings": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::finishing.finishing",
-      "mappedBy": "product"
+      "mappedBy": "products"
     },
     "materials": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::material.material",
-      "mappedBy": "product"
+      "mappedBy": "products"
     },
     "product_colors": {
       "type": "relation",

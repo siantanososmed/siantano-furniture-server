@@ -711,7 +711,7 @@ export interface ApiFinishingFinishing extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    product: Schema.Attribute.Relation<'manyToOne', 'api::product.product'>;
+    products: Schema.Attribute.Relation<'manyToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'internationalizedName'> &
       Schema.Attribute.Required &
@@ -885,7 +885,7 @@ export interface ApiMaterialMaterial extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    product: Schema.Attribute.Relation<'manyToOne', 'api::product.product'>;
+    products: Schema.Attribute.Relation<'manyToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'internationalizedName'> &
       Schema.Attribute.Required &
@@ -1059,7 +1059,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
         };
       }>;
     finishings: Schema.Attribute.Relation<
-      'oneToMany',
+      'manyToMany',
       'api::finishing.finishing'
     >;
     internationalizedName: Schema.Attribute.String &
@@ -1076,7 +1076,10 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::product.product'
     >;
-    materials: Schema.Attribute.Relation<'oneToMany', 'api::material.material'>;
+    materials: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::material.material'
+    >;
     name: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{

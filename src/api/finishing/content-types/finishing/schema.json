@@ -46,9 +46,9 @@
       "required": true,
       "unique": false
     },
-    "product": {
+    "products": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::product.product",
       "inversedBy": "finishings"
     }
