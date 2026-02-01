@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "hero_images",
+  "info": {
+    "singularName": "hero-image",
+    "pluralName": "hero-images",
+    "displayName": "HeroImage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contactUsHero": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "careerHero": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "ourStoryHero": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

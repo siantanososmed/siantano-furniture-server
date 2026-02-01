@@ -726,6 +726,36 @@ export interface ApiFinishingFinishing extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiHeroImageHeroImage extends Struct.SingleTypeSchema {
+  collectionName: 'hero_images';
+  info: {
+    displayName: 'HeroImage';
+    pluralName: 'hero-images';
+    singularName: 'hero-image';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    careerHero: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    contactUsHero: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::hero-image.hero-image'
+    > &
+      Schema.Attribute.Private;
+    ourStoryHero: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHeroHero extends Struct.SingleTypeSchema {
   collectionName: 'heroes';
   info: {
@@ -1136,20 +1166,16 @@ export interface ApiRecommendedProductRecommendedProduct
   options: {
     draftAndPublish: true;
   };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::recommended-product.recommended-product'
-    >;
+    > &
+      Schema.Attribute.Private;
     products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
@@ -1760,6 +1786,7 @@ declare module '@strapi/strapi' {
       'api::contact-us.contact-us': ApiContactUsContactUs;
       'api::email-inbox.email-inbox': ApiEmailInboxEmailInbox;
       'api::finishing.finishing': ApiFinishingFinishing;
+      'api::hero-image.hero-image': ApiHeroImageHeroImage;
       'api::hero.hero': ApiHeroHero;
       'api::job-applicant.job-applicant': ApiJobApplicantJobApplicant;
       'api::job.job': ApiJobJob;
